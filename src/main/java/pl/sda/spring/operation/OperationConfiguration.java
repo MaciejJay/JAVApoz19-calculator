@@ -4,10 +4,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-class SubtractionOperationConfiguration {
+class OperationConfiguration {
 
     @Bean
     SubtractionOperation subtractionOperation() {
         return new SubtractionOperation();
+    }
+
+    @Bean
+    DivisionOperation divisionOperation() {
+        return new DivisionOperation("You cannot divide by zero");
     }
 }
